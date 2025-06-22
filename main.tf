@@ -9,6 +9,12 @@ terraform {
       version = "~> 3.1"
     }
   }
+
+  backend "s3" {
+    bucket = "terraform-bucket-aj" # IMPORTANT: Replace this with the name of the S3 bucket you create manually
+    key    = "devops_pipelines/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
