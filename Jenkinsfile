@@ -5,11 +5,6 @@ pipeline {
     AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
   }
   stages {
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/arun-jathari/devops_pipelines.git'
-      }
-    }
     stage('Terraform Init') {
       steps {
         sh 'terraform init'
