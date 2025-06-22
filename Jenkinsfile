@@ -19,6 +19,12 @@ pipeline {
         sh 'terraform plan'
       }
     }
+    stage('Terraform Destroy') {
+      steps {
+        input 'Approve to DESTROY existing infrastructure?'
+        sh 'terraform destroy -auto-approve'
+      }
+    }
     stage('Terraform Apply') {
       steps {
         input 'Approve to apply?'
