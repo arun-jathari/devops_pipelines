@@ -11,7 +11,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "terraform-bucket-aj" # IMPORTANT: Replace this with the name of the S3 bucket you create manually
+    bucket = "terraform-bucket-aj" # IMPORTANT: Replace this with the name of the S3 bucket you create manually 
     key    = "devops_pipelines/terraform.tfstate"
     region = "us-east-1"
   }
