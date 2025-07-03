@@ -17,14 +17,13 @@ pipeline {
     }
     stage('Terraform Destroy') {
       steps {
-        input 'Approve to DESTROY existing infrastructure?'
-        echo 'Destroy step approved. Starting terraform destroy...'
+        echo 'Starting terraform destroy...'
         sh 'terraform destroy -auto-approve'
       }
     }
     stage('Terraform Apply') {
       steps {
-        input 'Approve to apply?'
+        echo 'Starting terraform apply...'
         sh 'terraform apply -auto-approve'
       }
     }
