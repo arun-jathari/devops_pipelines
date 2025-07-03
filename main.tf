@@ -22,7 +22,7 @@ provider "aws" {
 }
 
 resource "random_pet" "bucket_name" {
-  prefix = "my-unique-bucket-2025-07"
+  prefix = "my-unique-bucket-2025-07-02"
   length = 4
 }
 
